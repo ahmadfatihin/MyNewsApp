@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mynewsapp/config/routes/routes.gr.dart';
+import 'package:mynewsapp/constant/ui.dart';
 import 'package:mynewsapp/module/home/screens/home_layout.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // setupScreenUtil(context);
     return MaterialApp.router(
       title: 'My News App',
       theme: ThemeData(

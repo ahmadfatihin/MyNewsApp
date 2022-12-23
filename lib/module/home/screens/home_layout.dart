@@ -2,12 +2,14 @@ import 'package:auto_route/auto_route.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:mynewsapp/config/routes/routes.gr.dart';
+import 'package:mynewsapp/constant/ui.dart';
 
 class HomeLayoutScreen extends StatelessWidget {
   const HomeLayoutScreen({super.key});
 
   @override
   Widget build(context) {
+    setupScreenUtil(context);
     return AutoTabsScaffold(
       extendBody: true,
       routes: const [HomeMenu(), SearchMenu(), SavedMenu()],
