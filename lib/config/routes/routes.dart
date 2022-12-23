@@ -10,10 +10,10 @@ import 'package:mynewsapp/module/search/screens/search_screens.dart';
 @MaterialAutoRouter(
   replaceInRouteName: 'Screen,Route',
   routes: <AutoRoute>[
-    AutoRoute(page: HomeLayout, initial: true, children: [
-      AutoRoute(page: HomeScreen, path: "/map"),
-      AutoRoute(page: SearchScreen, path: "/search"),
-      AutoRoute(page: SavedScreen, path: "/saved"),
+    AutoRoute(page: HomeLayoutScreen, initial: true, children: [
+      AutoRoute(page: HomeScreen, path: "home", name: "HomeMenu"),
+      AutoRoute(page: SearchScreen, path: "search", name: "SearchMenu"),
+      AutoRoute(page: SavedScreen, path: "saved", name: "SavedMenu"),
     ]),
   ],
 )
