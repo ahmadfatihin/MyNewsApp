@@ -12,6 +12,7 @@ dependencies:
   auto_route: ^5.0.4
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
+  envify: ^2.0.2
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.1.1
@@ -20,26 +21,30 @@ dependencies:
 dev_dependencies:
   auto_route_generator: ^5.0.3
   build_runner: ^2.3.3
+  envify_generator: ^2.0.2
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+    
+dependency_overrides:
+  analyzer: ^5.0.0 #Because of envify generator
 
 flutter:
 
   uses-material-design: true
 fonts:
-    - family: NeutrifPro
-      fonts:
-        - asset: assets/fonts/neutrifpro-regular.ttf
-          weight: 100
-        - asset: assets/fonts/neutrifpro-medium.ttf
-          weight: 300
-        - asset: assets/fonts/neutrifpro-semibold.ttf
-          weight: 500
-        - asset: assets/fonts/neutrifpro-bold.ttf
-          weight: 900
-    - family: Mont
-      fonts:
-        - asset: assets/fonts/mont_extralight.otf
-        - asset: assets/fonts/mont_heavy.otf
-          weight: 900
+  - family: NeutrifPro
+    fonts:
+      - asset: assets/fonts/neutrifpro-regular.ttf
+        weight: 100
+      - asset: assets/fonts/neutrifpro-medium.ttf
+        weight: 300
+      - asset: assets/fonts/neutrifpro-semibold.ttf
+        weight: 500
+      - asset: assets/fonts/neutrifpro-bold.ttf
+        weight: 900
+  - family: Mont
+    fonts:
+      - asset: assets/fonts/mont_extralight.otf
+      - asset: assets/fonts/mont_heavy.otf
+        weight: 900
