@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mynewsapp/config/injectable/injectable.dart';
 import 'package:mynewsapp/config/routes/routes.gr.dart';
 import 'package:mynewsapp/constant/ui.dart';
 import 'package:mynewsapp/module/home/screens/home_layout.dart';
 
-void main() {
+void main() async {
+  await setupLocator();
+  await ScreenUtil.ensureScreenSize();
   runApp(MyApp());
 }
 
