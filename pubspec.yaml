@@ -27,3 +27,19 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+fonts:
+    - family: NeutrifPro
+      fonts:
+        - asset: assets/fonts/neutrifpro-regular.ttf
+          weight: 100
+        - asset: assets/fonts/neutrifpro-medium.ttf
+          weight: 300
+        - asset: assets/fonts/neutrifpro-semibold.ttf
+          weight: 500
+        - asset: assets/fonts/neutrifpro-bold.ttf
+          weight: 900
+    - family: Mont
+      fonts:
+        - asset: assets/fonts/mont_extralight.otf
+        - asset: assets/fonts/mont_heavy.otf
+          weight: 900

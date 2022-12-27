@@ -4,11 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 /// --------------
 /// Constant Color
 /// --------------
-Color get primaryColor => const Color(0xff25396F);
+Color get primaryColor => const Color(0xff897AFB);
+Color get whiteColor => const Color(0xffFFFFFF);
+Color get monoColor => const Color.fromARGB(255, 236, 236, 236);
 Color get orangeColor => const Color(0xffFFD08A);
 Color get blackColor => const Color(0xff242424);
-Color get grayColor => const Color(0xff9098B1);
-Color get grayDarkColor => const Color(0xff6F7789);
+Color get greyColor => const Color(0xff9098B1);
+Color get greyDarkColor => const Color(0xff6F7789);
 Color get redColor => const Color(0xffFB7181);
 
 /// -----------------------------------
@@ -73,6 +75,9 @@ double setFontSize(double size) => size.sp;
 /// Constant Base Text Styling
 /// -----------------------------------
 
+TextStyle headLine = TextStyle(
+    fontSize: setFontSize(40), color: blackColor, fontWeight: FontWeight.w900);
+
 TextStyle styleTitle = TextStyle(
     fontSize: setFontSize(36), color: blackColor, fontWeight: FontWeight.w700);
 
@@ -84,3 +89,6 @@ TextStyle styleSubtitle =
 
 TextStyle styleSubtitleLight = TextStyle(
     fontSize: setFontSize(32), color: blackColor, fontWeight: FontWeight.w100);
+
+TextStyle styleTextSmall =
+    TextStyle(fontSize: setFontSize(26), color: blackColor);

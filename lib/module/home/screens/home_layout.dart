@@ -15,7 +15,7 @@ class HomeLayoutScreen extends StatelessWidget {
       routes: const [HomeMenu(), SearchMenu(), SavedMenu()],
       bottomNavigationBuilder: (_, tabsRouter) {
         return CurvedNavigationBar(
-          color: Colors.white,
+          color: Colors.white.withOpacity(0.75),
           onTap: tabsRouter.setActiveIndex,
           index: tabsRouter.activeIndex,
           backgroundColor: Colors.transparent,
@@ -26,12 +26,12 @@ class HomeLayoutScreen extends StatelessWidget {
                 Icon(Icons.home_rounded, size: 30),
                 Text(
                   "Home",
-                  style: TextStyle(),
+                  style: styleTextSmall,
                 )
               ],
             ),
             Icon(Icons.list, size: 30),
-            Icon(Icons.compare_arrows, size: 30),
+            Icon(Icons.settings, size: 30),
           ],
         );
       },

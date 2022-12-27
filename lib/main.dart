@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'My News App',
       theme: ThemeData(
+        scaffoldBackgroundColor: monoColor,
         primarySwatch: Colors.blue,
       ),
       routerDelegate: _appRouter.delegate(),
