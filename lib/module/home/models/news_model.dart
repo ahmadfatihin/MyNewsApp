@@ -5,7 +5,7 @@ import 'package:mynewsapp/services/rest_api_services/models/api_response_model.d
 part 'news_model.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class NewsModel extends Equatable with Serializable {
+class NewsModel extends Equatable {
   final String? author;
   final String? title;
   final String? description;
