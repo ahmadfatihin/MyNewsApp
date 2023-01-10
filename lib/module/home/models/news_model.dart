@@ -6,15 +6,15 @@ part 'news_model.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class NewsModel extends Equatable {
-  final String? author;
-  final String? title;
+  final String author;
+  final String title;
   final String? description;
   final String? urlImage;
   final String? publishedAt;
   final String? content;
   const NewsModel({
-    this.author,
-    this.title,
+    required this.author,
+    required this.title,
     this.description,
     this.urlImage,
     this.publishedAt,

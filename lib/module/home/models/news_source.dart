@@ -6,14 +6,14 @@ part 'news_source.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class NewsSource extends Equatable {
-  String? id;
-  String? name;
-  String? country;
-  NewsSource(
+  final String? id;
+  final String? name;
+  final String? country;
+  const NewsSource({
     this.id,
     this.name,
     this.country,
-  );
+  });
 
   factory NewsSource.fromJson(Map<String, dynamic> json) =>
       _$NewsSourceFromJson(json);
