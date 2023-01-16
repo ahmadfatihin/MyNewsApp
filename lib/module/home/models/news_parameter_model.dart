@@ -5,18 +5,20 @@ part 'news_parameter_model.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class NewsParameterModel extends Equatable {
-  final String? country;
-  final String? language;
-  final String? q;
-  final String? sortBy;
-  final int? pageSize;
-  final String? sources;
-  const NewsParameterModel({
+  String? country;
+  String? language;
+  String? q;
+  String? sortBy;
+  int? pageSize;
+  int? page;
+  String? sources;
+  NewsParameterModel({
     this.country,
     this.language,
     this.q,
     this.sortBy,
     this.pageSize,
+    this.page,
     this.sources,
   });
 
@@ -32,6 +34,7 @@ class NewsParameterModel extends Equatable {
         q,
         sortBy,
         pageSize,
+        page,
         sources,
       ];
 }

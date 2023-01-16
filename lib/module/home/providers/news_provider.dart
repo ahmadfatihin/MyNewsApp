@@ -27,42 +27,17 @@ class NewsNotifier extends StateNotifier<ListState<NewsModel>> {
   Future<void> getNews() async {
     state = state.copyWith(isLoading: true);
     try {
-      final postNews = await newsRepo.getNews();
-      print('1');
-      // var filter = FilterNewsModel();
-      // filter.page = state.page;
-      // filter.perPage = 10;
-      // filter.country = "id";
+      var filter = NewsParameterModel();
+      filter.page = state.page;
+      filter.pageSize = 10;
+      filter.country = "id";
 
-      // final result = await newsService.getNews(param: filter.toJson());
-      // state = state.copyWith(items: result.data!, isLoading: false);
+      final result = await newsRepo.getNews(param: filter);
+      var data = <NewsModel>[];
+      data.add(result);
+      state = state.copyWith(items: data, isLoading: false);
     } catch (e) {
       if (mounted) state = state.copyWith(isLoading: false);
     }
   }
-
-  // Future<void> loadMore() async {
-  //   state = state.copyWith(isLoading: true);
-  //   try {
-  //     var filter = FilterNewsModel();
-  //     filter.page = state.page + 1;
-  //     filter.perPage = 10;
-  //     filter.country = "id";
-
-  //     final result = await newsService.getNews(param: filter.toJson());
-
-  //     /// If reached max page then set reachedMax to true
-  //     if (result.data!.isNotEmpty) {
-  //       state = state.copyWith(
-  //           items: state.items + result.data!,
-  //           isLoading: false,
-  //           page: state.page + 1);
-  //     } else {
-  //       state = state.copyWith(
-  //           isLoading: false, reachedMax: true, items: state.items);
-  //     }
-  //   } catch (e) {
-  //     if (mounted) state = state.copyWith(isLoading: false, items: state.items);
-  //   }
-  // }
 }
